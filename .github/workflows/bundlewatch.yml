@@ -1,0 +1,23 @@
+name: BundleWatch
+on: [push]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@v2.2.0
+        with:
+          node-version: 14.x
+
+      - name: Install npm@7
+        run: npm install -g npm@7
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build bundles
+        run: npm run build
+
+      - name: Analyze Bundle
+        run: npx bundlewatch

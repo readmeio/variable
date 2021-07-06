@@ -68,5 +68,13 @@
         "Infinity"
       ]
     }
+  },
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "dist/index.js",
+        "maxSize": "5KB"
+      }
+    ]
   }
 }
