@@ -1,3 +1,12 @@
+## <small>13.5.4 (2021-09-01)</small>
+
+* chore(deps-dev): bump @readme/eslint-config from 6.0.0 to 6.1.0 (#22) ([9f04ca9](https://github.com/readmeio/variable/commit/9f04ca9)), closes [#22](https://github.com/readmeio/variable/issues/22)
+* chore(deps-dev): bump babel-jest from 27.0.6 to 27.1.0 (#20) ([01dc8ae](https://github.com/readmeio/variable/commit/01dc8ae)), closes [#20](https://github.com/readmeio/variable/issues/20)
+* chore(deps-dev): bump jest from 27.0.6 to 27.1.0 (#21) ([ee3ae90](https://github.com/readmeio/variable/commit/ee3ae90)), closes [#21](https://github.com/readmeio/variable/issues/21)
+* chore(deps-dev): removing conventional-changelog-cli in favor of npx ([abae4fc](https://github.com/readmeio/variable/commit/abae4fc))
+
+
+
 ## <small>13.5.3 (2021-08-26)</small>
 
 * chore(deps-dev): bump @babel/preset-env from 7.14.9 to 7.15.0 (#18) ([d9ca3a2](https://github.com/readmeio/variable/commit/d9ca3a2)), closes [#18](https://github.com/readmeio/variable/issues/18)
