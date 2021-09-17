@@ -47,6 +47,12 @@ describe('single variable', () => {
   });
 
   it.todo('should set `selected` if nothing is selected');
+
+  it('should render objects as strings', () => {
+    const variable = shallow(<Variable {...props} user={{ apiKey: { renderTo: 'string' } }} />);
+
+    expect(variable.text()).toBe(JSON.stringify({ renderTo: 'string' }));
+  });
 });
 
 describe('multiple variables', () => {
