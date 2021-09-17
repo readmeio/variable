@@ -1,3 +1,13 @@
+## 13.6.0 (2021-09-17)
+
+* feat: stringify object values (#24) ([1936d63](https://github.com/readmeio/variable/commit/1936d63)), closes [#24](https://github.com/readmeio/variable/issues/24)
+* feat: upgrading our build process to webpack 5 (#23) ([de0df3e](https://github.com/readmeio/variable/commit/de0df3e)), closes [#23](https://github.com/readmeio/variable/issues/23)
+* chore(deps-dev): bumping dev deps ([ae8e8b6](https://github.com/readmeio/variable/commit/ae8e8b6))
+* ci: setting up codeql ([f4127de](https://github.com/readmeio/variable/commit/f4127de))
+* docs: adding a security policy ([5560b8d](https://github.com/readmeio/variable/commit/5560b8d))
+
+
+
 ## <small>13.5.4 (2021-09-01)</small>
 
 * chore(deps-dev): bump @readme/eslint-config from 6.0.0 to 6.1.0 (#22) ([9f04ca9](https://github.com/readmeio/variable/commit/9f04ca9)), closes [#22](https://github.com/readmeio/variable/issues/22)
