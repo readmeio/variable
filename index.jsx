@@ -33,9 +33,9 @@ class Variable extends React.Component {
   // - uppercase key
   getValue() {
     const { variable } = this.props;
-    if (this.props.user[variable]) return this.props.user[variable];
+    const value = this.props.user[variable] || this.getDefault();
 
-    return this.getDefault();
+    return typeof value === 'object' ? JSON.stringify(value) : value;
   }
 
   toggleVarDropdown() {
