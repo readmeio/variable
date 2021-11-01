@@ -1,3 +1,17 @@
+## <small>13.6.1 (2021-11-01)</small>
+
+* chore(deps-dev): bump @commitlint/cli from 13.1.0 to 13.2.0 (#28) ([ee61e04](https://github.com/readmeio/variable/commit/ee61e04)), closes [#28](https://github.com/readmeio/variable/issues/28)
+* chore(deps-dev): bump @commitlint/config-conventional (#29) ([0af85da](https://github.com/readmeio/variable/commit/0af85da)), closes [#29](https://github.com/readmeio/variable/issues/29)
+* chore(deps-dev): bump babel-jest from 27.2.0 to 27.2.4 (#30) ([daa4f5a](https://github.com/readmeio/variable/commit/daa4f5a)), closes [#30](https://github.com/readmeio/variable/issues/30)
+* chore(deps-dev): bump jest from 27.2.0 to 27.2.4 (#26) ([3d54b0b](https://github.com/readmeio/variable/commit/3d54b0b)), closes [#26](https://github.com/readmeio/variable/issues/26)
+* chore(deps-dev): bump webpack from 5.53.0 to 5.56.0 (#27) ([84c76c5](https://github.com/readmeio/variable/commit/84c76c5)), closes [#27](https://github.com/readmeio/variable/issues/27)
+* chore(deps-dev): upgrading dev deps ([3420a84](https://github.com/readmeio/variable/commit/3420a84))
+* chore(deps): bump actions/checkout from 2.3.4 to 2.3.5 (#31) ([880b023](https://github.com/readmeio/variable/commit/880b023)), closes [#31](https://github.com/readmeio/variable/issues/31)
+* chore(deps): bump actions/setup-node from 2.4.0 to 2.4.1 (#25) ([2d37cd6](https://github.com/readmeio/variable/commit/2d37cd6)), closes [#25](https://github.com/readmeio/variable/issues/25)
+* docs: adding a code of conduct ([435b858](https://github.com/readmeio/variable/commit/435b858))
+
+
+
 ## 13.6.0 (2021-09-17)
 
 * feat: stringify object values (#24) ([1936d63](https://github.com/readmeio/variable/commit/1936d63)), closes [#24](https://github.com/readmeio/variable/issues/24)
