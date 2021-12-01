@@ -1,3 +1,19 @@
+## <small>13.6.2 (2021-12-01)</small>
+
+* chore(deps-dev): bump @babel/preset-env from 7.16.0 to 7.16.4 (#50) ([ded9661](https://github.com/readmeio/variable/commit/ded9661)), closes [#50](https://github.com/readmeio/variable/issues/50)
+* chore(deps-dev): bump @commitlint/cli from 14.1.0 to 15.0.0 (#48) ([64efa9a](https://github.com/readmeio/variable/commit/64efa9a)), closes [#48](https://github.com/readmeio/variable/issues/48)
+* chore(deps-dev): bump @commitlint/config-conventional (#45) ([c2bf930](https://github.com/readmeio/variable/commit/c2bf930)), closes [#45](https://github.com/readmeio/variable/issues/45)
+* chore(deps-dev): bump babel-jest from 27.3.1 to 27.4.2 (#46) ([0924379](https://github.com/readmeio/variable/commit/0924379)), closes [#46](https://github.com/readmeio/variable/issues/46)
+* chore(deps-dev): bump jest from 27.3.1 to 27.4.3 (#44) ([f0dba8f](https://github.com/readmeio/variable/commit/f0dba8f)), closes [#44](https://github.com/readmeio/variable/issues/44)
+* chore(deps-dev): bump prettier from 2.4.1 to 2.5.0 (#51) ([590daf8](https://github.com/readmeio/variable/commit/590daf8)), closes [#51](https://github.com/readmeio/variable/issues/51)
+* chore(deps-dev): bump terser-webpack-plugin from 5.2.4 to 5.2.5 (#49) ([8d9a7ff](https://github.com/readmeio/variable/commit/8d9a7ff)), closes [#49](https://github.com/readmeio/variable/issues/49)
+* chore(deps-dev): bump webpack from 5.61.0 to 5.64.4 (#47) ([3a4e574](https://github.com/readmeio/variable/commit/3a4e574)), closes [#47](https://github.com/readmeio/variable/issues/47)
+* chore(deps-dev): upgrading eslint and @readme/eslint-config ([c779551](https://github.com/readmeio/variable/commit/c779551))
+* chore(deps): bump actions/checkout from 2.3.5 to 2.4.0 (#42) ([bc6e966](https://github.com/readmeio/variable/commit/bc6e966)), closes [#42](https://github.com/readmeio/variable/issues/42)
+* chore(deps): bump actions/setup-node from 2.4.1 to 2.5.0 (#43) ([a004648](https://github.com/readmeio/variable/commit/a004648)), closes [#43](https://github.com/readmeio/variable/issues/43)
+
+
+
 ## <small>13.6.1 (2021-11-01)</small>
 
 * chore(deps-dev): bump @commitlint/cli from 13.1.0 to 13.2.0 (#28) ([ee61e04](https://github.com/readmeio/variable/commit/ee61e04)), closes [#28](https://github.com/readmeio/variable/issues/28)
