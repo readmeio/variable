@@ -1,3 +1,9 @@
+## <small>13.6.3 (2021-12-16)</small>
+
+* fix: cleaning up engine requirements and updating dev deps (#52) ([e19b375](https://github.com/readmeio/variable/commit/e19b375)), closes [#52](https://github.com/readmeio/variable/issues/52)
+
+
+
 ## <small>13.6.2 (2021-12-01)</small>
 
 * chore(deps-dev): bump @babel/preset-env from 7.16.0 to 7.16.4 (#50) ([ded9661](https://github.com/readmeio/variable/commit/ded9661)), closes [#50](https://github.com/readmeio/variable/issues/50)
