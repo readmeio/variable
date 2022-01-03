@@ -1,3 +1,20 @@
+## <small>13.6.4 (2022-01-03)</small>
+
+* chore(deps-dev): bump @babel/preset-env from 7.16.4 to 7.16.7 (#64) ([6ad01b1](https://github.com/readmeio/variable/commit/6ad01b1)), closes [#64](https://github.com/readmeio/variable/issues/64)
+* chore(deps-dev): bump @babel/preset-react from 7.16.0 to 7.16.7 (#63) ([bfa0952](https://github.com/readmeio/variable/commit/bfa0952)), closes [#63](https://github.com/readmeio/variable/issues/63)
+* chore(deps-dev): bump @commitlint/cli from 15.0.0 to 16.0.1 (#60) ([260e158](https://github.com/readmeio/variable/commit/260e158)), closes [#60](https://github.com/readmeio/variable/issues/60)
+* chore(deps-dev): bump @commitlint/config-conventional (#57) ([db23a1f](https://github.com/readmeio/variable/commit/db23a1f)), closes [#57](https://github.com/readmeio/variable/issues/57)
+* chore(deps-dev): bump @readme/eslint-config from 8.0.2 to 8.1.1 (#58) ([3ff7e7e](https://github.com/readmeio/variable/commit/3ff7e7e)), closes [#58](https://github.com/readmeio/variable/issues/58)
+* chore(deps-dev): bump eslint from 8.3.0 to 8.6.0 (#54) ([0e53734](https://github.com/readmeio/variable/commit/0e53734)), closes [#54](https://github.com/readmeio/variable/issues/54)
+* chore(deps-dev): bump jest from 27.4.3 to 27.4.5 (#62) ([971dc02](https://github.com/readmeio/variable/commit/971dc02)), closes [#62](https://github.com/readmeio/variable/issues/62)
+* chore(deps-dev): bump prettier from 2.5.0 to 2.5.1 (#65) ([0377616](https://github.com/readmeio/variable/commit/0377616)), closes [#65](https://github.com/readmeio/variable/issues/65)
+* chore(deps-dev): bump terser-webpack-plugin from 5.2.5 to 5.3.0 (#56) ([cb7cc79](https://github.com/readmeio/variable/commit/cb7cc79)), closes [#56](https://github.com/readmeio/variable/issues/56)
+* chore(deps-dev): bump webpack from 5.64.4 to 5.65.0 (#55) ([908f7a9](https://github.com/readmeio/variable/commit/908f7a9)), closes [#55](https://github.com/readmeio/variable/issues/55)
+* chore(deps): bump actions/setup-node from 2.5.0 to 2.5.1 (#53) ([edb124f](https://github.com/readmeio/variable/commit/edb124f)), closes [#53](https://github.com/readmeio/variable/issues/53)
+* chore(deps): bump prop-types from 15.7.2 to 15.8.0 (#59) ([53226d6](https://github.com/readmeio/variable/commit/53226d6)), closes [#59](https://github.com/readmeio/variable/issues/59)
+
+
+
 ## <small>13.6.3 (2021-12-16)</small>
 
 * fix: cleaning up engine requirements and updating dev deps (#52) ([e19b375](https://github.com/readmeio/variable/commit/e19b375)), closes [#52](https://github.com/readmeio/variable/issues/52)
