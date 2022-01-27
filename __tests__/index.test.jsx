@@ -125,4 +125,24 @@ describe('VARIABLE_REGEXP', () => {
   it('should match against periods', () => {
     expect('<<api.key>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
+
+  it('should match against hyphens', () => {
+    expect('<<api-key>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+
+  it('should match against spaces', () => {
+    expect('<<api key>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+
+  it('should match against colons', () => {
+    expect('<<glossary:term>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+
+  it('should be case insensitive', () => {
+    expect('<<api.key>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+
+  it('should match non-english characters', () => {
+    expect('<<片仮名>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
 });
