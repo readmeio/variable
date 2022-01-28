@@ -145,7 +145,7 @@ describe('VARIABLE_REGEXP', () => {
   it('should match non-english characters', () => {
     expect('<<片仮名>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
-  
+
   it('should match against colons with non-english characters', () => {
     expect('<<glossary:ラベル>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
