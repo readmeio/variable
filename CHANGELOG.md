@@ -1,3 +1,10 @@
+## <small>13.6.5 (2022-01-28)</small>
+
+* fix: match non-english characters in variables + glossary terms (#66) ([1aec9fe](https://github.com/readmeio/variable/commit/1aec9fe)), closes [#66](https://github.com/readmeio/variable/issues/66)
+* chore: bump deps (#67) ([dfefdd9](https://github.com/readmeio/variable/commit/dfefdd9)), closes [#67](https://github.com/readmeio/variable/issues/67)
+
+
+
 ## <small>13.6.4 (2022-01-03)</small>
 
 * chore(deps-dev): bump @babel/preset-env from 7.16.4 to 7.16.7 (#64) ([6ad01b1](https://github.com/readmeio/variable/commit/6ad01b1)), closes [#64](https://github.com/readmeio/variable/issues/64)
