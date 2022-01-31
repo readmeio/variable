@@ -1,3 +1,9 @@
+## <small>13.6.7 (2022-01-31)</small>
+
+* chore(regex): match numeric characters (#69) ([8677399](https://github.com/readmeio/variable/commit/8677399)), closes [#69](https://github.com/readmeio/variable/issues/69)
+
+
+
 ## <small>13.6.6 (2022-01-31)</small>
 
 * fix(🔥): match underscored var names (#68) ([79d9b7d](https://github.com/readmeio/variable/commit/79d9b7d)), closes [#68](https://github.com/readmeio/variable/issues/68)
