@@ -1,3 +1,9 @@
+## <small>13.6.6 (2022-01-31)</small>
+
+* fix(🔥): match underscored var names (#68) ([79d9b7d](https://github.com/readmeio/variable/commit/79d9b7d)), closes [#68](https://github.com/readmeio/variable/issues/68)
+
+
+
 ## <small>13.6.5 (2022-01-28)</small>
 
 * fix: match non-english characters in variables + glossary terms (#66) ([1aec9fe](https://github.com/readmeio/variable/commit/1aec9fe)), closes [#66](https://github.com/readmeio/variable/issues/66)
