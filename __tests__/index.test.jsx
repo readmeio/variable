@@ -138,6 +138,10 @@ describe('VARIABLE_REGEXP', () => {
     expect('<<glossary:term>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
 
+  it('should match against underscores', () => {
+    expect('<<api_key>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+
   it('should be case insensitive', () => {
     expect('<<api.KeY>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
