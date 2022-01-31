@@ -146,6 +146,12 @@ describe('VARIABLE_REGEXP', () => {
     expect('<<api.KeY>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
 
+  it('should match numeric characters', () => {
+    expect('<<P2P>>').toMatch(new RegExp(VARIABLE_REGEXP));
+    expect('<<123>>').toMatch(new RegExp(VARIABLE_REGEXP));
+    expect('<<glossary:123>>').toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+
   it('should match non-english characters', () => {
     expect('<<片仮名>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
