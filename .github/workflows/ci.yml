@@ -28,9 +28,9 @@ jobs:
       - name: Install deps
         run: npm ci
 
-    - name: Install React 16
-      if: matrix.react == '16'
-      run: npm i react@${{ matrix.react }} react-dom@${{ matrix.react }}
+      - name: Install React 16
+        if: matrix.react == '16'
+        run: npm i react@${{ matrix.react }} react-dom@${{ matrix.react }}
 
       - name: Run tests
         run: npm test
