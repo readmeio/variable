@@ -1,5 +1,5 @@
 const React = require('react');
-const { shallow } = require('enzyme');
+const { fireEvent, render } = require('@testing-library/react');
 
 const { Variable, VARIABLE_REGEXP } = require('../index');
 
@@ -13,45 +13,47 @@ describe('single variable', () => {
   };
 
   it('should render value', () => {
-    const variable = shallow(<Variable {...props} />);
+    const { container } = render(<Variable {...props} />);
 
-    expect(variable.text()).toBe('123456');
+    expect(container).toHaveTextContent('123456');
   });
 
   it('should render default if value not set', () => {
-    const variable = shallow(<Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} user={{}} />);
+    const { container } = render(<Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} user={{}} />);
 
-    expect(variable.text()).toBe('default');
+    expect(container).toHaveTextContent('default');
   });
 
   it('should render uppercase if no value and no default', () => {
-    const variable = shallow(<Variable {...props} defaults={[]} user={{}} />);
+    const { container } = render(<Variable {...props} defaults={[]} user={{}} />);
 
-    expect(variable.text()).toBe('APIKEY');
+    expect(container).toHaveTextContent('APIKEY');
   });
 
   it('should render auth dropdown if default and oauth enabled', () => {
-    const variable = shallow(
+    const { container } = render(
       <Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} oauth user={{}} />
     );
-    variable.find('.variable-underline').simulate('click');
 
-    expect(variable.find('#loginDropdown')).toHaveLength(1);
+    fireEvent.click(container.querySelector('.variable-underline'));
+
+    expect(container.querySelectorAll('#loginDropdown')).toHaveLength(1);
   });
 
   it('should render auth dropdown if no default and oauth enabled', () => {
-    const variable = shallow(<Variable {...props} defaults={[]} oauth user={{}} />);
-    variable.find('.variable-underline').simulate('click');
+    const { container } = render(<Variable {...props} defaults={[]} oauth user={{}} />);
 
-    expect(variable.find('#loginDropdown')).toHaveLength(1);
+    fireEvent.click(container.querySelector('.variable-underline'));
+
+    expect(container.querySelectorAll('#loginDropdown')).toHaveLength(1);
   });
 
   it.todo('should set `selected` if nothing is selected');
 
   it('should render objects as strings', () => {
-    const variable = shallow(<Variable {...props} user={{ apiKey: { renderTo: 'string' } }} />);
+    const { container } = render(<Variable {...props} user={{ apiKey: { renderTo: 'string' } }} />);
 
-    expect(variable.text()).toBe(JSON.stringify({ renderTo: 'string' }));
+    expect(container).toHaveTextContent(JSON.stringify({ renderTo: 'string' }));
   });
 });
 
@@ -70,32 +72,34 @@ describe('multiple variables', () => {
   };
 
   it('should render the first of multiple values', () => {
-    const variable = shallow(<Variable {...props} />);
+    const { container } = render(<Variable {...props} />);
 
-    expect(variable.text()).toBe('123');
+    expect(container).toHaveTextContent('123');
   });
 
   it('should render whatever the selected name is', () => {
-    const variable = shallow(<Variable {...props} selected="project2" />);
+    const { container } = render(<Variable {...props} selected="project2" />);
 
-    expect(variable.text()).toBe('456');
+    expect(container).toHaveTextContent('456');
   });
 
   it('should show dropdown when clicked', () => {
-    const variable = shallow(<Variable {...props} selected="project2" />);
+    const { container } = render(<Variable {...props} selected="project2" />);
 
-    variable.find('.variable-underline').simulate('click');
+    fireEvent.click(container.querySelector('.variable-underline'));
 
-    expect(variable.find('select option').map(el => el.text())).toStrictEqual(['project1', 'project2']);
+    const options = [];
+    container.querySelectorAll('select option').forEach(tk => {
+      options.push(tk.text);
+    });
+
+    expect(options).toStrictEqual(['project1', 'project2']);
   });
 
   it('should select value when clicked', () => {
-    let called = false;
-    function changeSelected(selected) {
-      expect(selected).toBe('project2');
-      called = true;
-    }
-    const variable = shallow(
+    const changeSelected = jest.fn();
+
+    const { container } = render(
       <Variable
         {...props}
         changeSelected={changeSelected}
@@ -106,16 +110,16 @@ describe('multiple variables', () => {
       />
     );
 
-    variable.find('.variable-underline').simulate('click');
-    variable.find('select').simulate('change', {
+    fireEvent.click(container.querySelector('.variable-underline'));
+    fireEvent.change(container.querySelector('select'), {
       target: {
-        value: variable.find('select option').at(1).text(),
+        value: container.querySelectorAll('select option')[1].text,
       },
     });
 
-    expect(called).toBe(true);
+    expect(changeSelected).toHaveBeenCalledWith('project2');
 
-    expect(variable.state('showDropdown')).toBe(false);
+    expect(container.querySelector('select')).not.toBeInTheDocument();
   });
 
   it.todo('should render auth dropdown if default and oauth enabled');
