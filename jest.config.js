@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   collectCoverageFrom: ['**/*.{js,jsx}', '!**/node_modules/**', '!jest.config.js', '!**/coverage/lcov-report/**'],
   coveragePathIgnorePatterns: ['<rootDir>/webpack.*.js', 'dist/'],
@@ -17,7 +15,8 @@ module.exports = {
   },
 
   rootDir: './',
-  setupFiles: [path.join(__dirname, '/lib/enzyme')],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
   testMatch: ['**/__tests__/**/(*[._])+test.[jt]s?(x)'],
   testURL: 'http://localhost',
   transform: {

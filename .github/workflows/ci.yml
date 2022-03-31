@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x, 16.x]
+        react: [16, 17]
+
+    name: build (${{ matrix.node-version }} w/ React ${{ matrix.react }}
 
     steps:
       - uses: actions/checkout@v3
@@ -24,6 +27,10 @@ jobs:
 
       - name: Install deps
         run: npm ci
+
+      - name: Install React 16
+        if: matrix.react == '16'
+        run: npm i react@${{ matrix.react }} react-dom@${{ matrix.react }}
 
       - name: Run tests
         run: npm test
