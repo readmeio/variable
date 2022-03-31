@@ -1,3 +1,23 @@
+## 14.0.0 (2022-03-31)
+
+* feat: supporting react 17 (#83) ([3ce1fc3](https://github.com/readmeio/variable/commit/3ce1fc3)), closes [#83](https://github.com/readmeio/variable/issues/83)
+* chore(deps-dev): bump @commitlint/cli from 16.1.0 to 16.2.1 (#77) ([d364ac7](https://github.com/readmeio/variable/commit/d364ac7)), closes [#77](https://github.com/readmeio/variable/issues/77)
+* chore(deps-dev): bump @commitlint/config-conventional (#75) ([0daa50f](https://github.com/readmeio/variable/commit/0daa50f)), closes [#75](https://github.com/readmeio/variable/issues/75)
+* chore(deps-dev): bump @readme/eslint-config from 8.2.0 to 8.4.4 (#79) ([7549f81](https://github.com/readmeio/variable/commit/7549f81)), closes [#79](https://github.com/readmeio/variable/issues/79)
+* chore(deps-dev): bump babel-jest from 27.4.6 to 27.5.1 (#80) ([9d0c2c7](https://github.com/readmeio/variable/commit/9d0c2c7)), closes [#80](https://github.com/readmeio/variable/issues/80)
+* chore(deps-dev): bump eslint from 8.7.0 to 8.8.0 (#71) ([74a9740](https://github.com/readmeio/variable/commit/74a9740)), closes [#71](https://github.com/readmeio/variable/issues/71)
+* chore(deps-dev): bump eslint from 8.8.0 to 8.10.0 (#78) ([a9dcd05](https://github.com/readmeio/variable/commit/a9dcd05)), closes [#78](https://github.com/readmeio/variable/issues/78)
+* chore(deps-dev): bump jest from 27.4.7 to 27.5.1 (#76) ([4542882](https://github.com/readmeio/variable/commit/4542882)), closes [#76](https://github.com/readmeio/variable/issues/76)
+* chore(deps-dev): bump terser-webpack-plugin from 5.3.0 to 5.3.1 (#70) ([bd57825](https://github.com/readmeio/variable/commit/bd57825)), closes [#70](https://github.com/readmeio/variable/issues/70)
+* chore(deps-dev): bump webpack from 5.67.0 to 5.68.0 (#72) ([260ffd7](https://github.com/readmeio/variable/commit/260ffd7)), closes [#72](https://github.com/readmeio/variable/issues/72)
+* chore(deps-dev): bump webpack from 5.68.0 to 5.69.1 (#81) ([1e9f175](https://github.com/readmeio/variable/commit/1e9f175)), closes [#81](https://github.com/readmeio/variable/issues/81)
+* chore(deps): bump actions/checkout from 2.4.0 to 3 (#73) ([2249526](https://github.com/readmeio/variable/commit/2249526)), closes [#73](https://github.com/readmeio/variable/issues/73)
+* chore(deps): bump actions/setup-node from 2.5.1 to 3 (#74) ([bef4f01](https://github.com/readmeio/variable/commit/bef4f01)), closes [#74](https://github.com/readmeio/variable/issues/74)
+* chore(deps): bump minimist from 1.2.5 to 1.2.6 (#82) ([b324f05](https://github.com/readmeio/variable/commit/b324f05)), closes [#82](https://github.com/readmeio/variable/issues/82)
+* docs: delete docs in favor of shared org files ([3143674](https://github.com/readmeio/variable/commit/3143674))
+
+
+
 ## <small>13.6.7 (2022-01-31)</small>
 
 * chore(regex): match numeric characters (#69) ([8677399](https://github.com/readmeio/variable/commit/8677399)), closes [#69](https://github.com/readmeio/variable/issues/69)
