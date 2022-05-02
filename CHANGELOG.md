@@ -1,3 +1,23 @@
+## 15.0.0 (2022-05-02)
+
+* feat: supporting node 18 (#98) ([4796208](https://github.com/readmeio/variable/commit/4796208)), closes [#98](https://github.com/readmeio/variable/issues/98)
+* feat: supporting react 18 (#99) ([99e46eb](https://github.com/readmeio/variable/commit/99e46eb)), closes [#99](https://github.com/readmeio/variable/issues/99)
+* chore(deps-dev): bump @babel/preset-env from 7.16.11 to 7.17.10 (#94) ([c759f57](https://github.com/readmeio/variable/commit/c759f57)), closes [#94](https://github.com/readmeio/variable/issues/94)
+* chore(deps-dev): bump @commitlint/cli from 16.2.3 to 16.2.4 (#97) ([df8f262](https://github.com/readmeio/variable/commit/df8f262)), closes [#97](https://github.com/readmeio/variable/issues/97)
+* chore(deps-dev): bump @commitlint/config-conventional (#90) ([0d1d04f](https://github.com/readmeio/variable/commit/0d1d04f)), closes [#90](https://github.com/readmeio/variable/issues/90)
+* chore(deps-dev): bump @readme/eslint-config from 8.5.1 to 8.7.3 (#87) ([4f05fa6](https://github.com/readmeio/variable/commit/4f05fa6)), closes [#87](https://github.com/readmeio/variable/issues/87)
+* chore(deps-dev): bump @testing-library/jest-dom from 5.16.3 to 5.16.4 (#96) ([e316aed](https://github.com/readmeio/variable/commit/e316aed)), closes [#96](https://github.com/readmeio/variable/issues/96)
+* chore(deps-dev): bump @testing-library/react from 12.1.4 to 12.1.5 (#91) ([b16e22c](https://github.com/readmeio/variable/commit/b16e22c)), closes [#91](https://github.com/readmeio/variable/issues/91)
+* chore(deps-dev): bump babel-jest from 27.5.1 to 28.0.3 (#86) ([a013d78](https://github.com/readmeio/variable/commit/a013d78)), closes [#86](https://github.com/readmeio/variable/issues/86)
+* chore(deps-dev): bump babel-loader from 8.2.4 to 8.2.5 (#89) ([6ebfe89](https://github.com/readmeio/variable/commit/6ebfe89)), closes [#89](https://github.com/readmeio/variable/issues/89)
+* chore(deps-dev): bump eslint from 8.12.0 to 8.14.0 (#92) ([4cd26b2](https://github.com/readmeio/variable/commit/4cd26b2)), closes [#92](https://github.com/readmeio/variable/issues/92)
+* chore(deps-dev): bump prettier from 2.6.1 to 2.6.2 (#93) ([3372bf7](https://github.com/readmeio/variable/commit/3372bf7)), closes [#93](https://github.com/readmeio/variable/issues/93)
+* chore(deps-dev): bump webpack from 5.70.0 to 5.71.0 (#84) ([84a3bbe](https://github.com/readmeio/variable/commit/84a3bbe)), closes [#84](https://github.com/readmeio/variable/issues/84)
+* chore(deps-dev): bump webpack from 5.71.0 to 5.72.0 (#88) ([d257173](https://github.com/readmeio/variable/commit/d257173)), closes [#88](https://github.com/readmeio/variable/issues/88)
+* chore(deps): bump github/codeql-action from 1 to 2 (#85) ([76e0a1d](https://github.com/readmeio/variable/commit/76e0a1d)), closes [#85](https://github.com/readmeio/variable/issues/85)
+
+
+
 ## 14.0.0 (2022-03-31)
 
 * feat: supporting react 17 (#83) ([3ce1fc3](https://github.com/readmeio/variable/commit/3ce1fc3)), closes [#83](https://github.com/readmeio/variable/issues/83)
