@@ -10,7 +10,7 @@
     "url": "git://github.com/readmeio/variable.git"
   },
   "engines": {
-    "node": "^14 || ^16"
+    "node": ">=14"
   },
   "scripts": {
     "build": "webpack",
