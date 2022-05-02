@@ -7,33 +7,35 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version:
-          - 14
-          - 16
-          - 18
-        react: [16, 17]
+        node: [14, 16, 18]
+        react: [16, 17, 18]
 
-    name: build (${{ matrix.node-version }} w/ React ${{ matrix.react }}
+    name: build (${{ matrix.node }} w/ React ${{ matrix.react }}
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node }}
 
       # Node 14 ships with npm@6 which doesn't install peerDeps by default.
       - name: Install npm@7
-        if: matrix.node-version == '14'
+        if: matrix.node == '14'
         run: npm install -g npm@7
 
       - name: Install deps
         run: npm ci
 
-      - name: Install React 16
-        if: matrix.react == '16'
+      - name: Install React ${{ matrix.react }}
         run: npm i react@${{ matrix.react }} react-dom@${{ matrix.react }}
+
+      # `@testing-library/react@13` dropped support for React 16 and 17 so to ensure that we run
+      # fine under React 18 we should upgrade it if we're testing React 18.
+      - name: Install testing-library react for React 18
+        if: matrix.react == '18'
+        run: npm i @testing-library/react@13
 
       - name: Run tests
         run: npm test
