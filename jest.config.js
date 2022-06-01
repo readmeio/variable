@@ -17,8 +17,10 @@ module.exports = {
   rootDir: './',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
+  testEnvironmentOptions: {
+    url: 'http://localhost',
+  },
   testMatch: ['**/__tests__/**/(*[._])+test.[jt]s?(x)'],
-  testURL: 'http://localhost',
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
   },
