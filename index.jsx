@@ -27,18 +27,42 @@ class Variable extends React.Component {
     return this.props.variable.toUpperCase();
   }
 
+  getSelectedValue(selected) {
+    const { user } = this.props;
+    let selectedValue = {};
+    if (Array.isArray(user.keys)) {
+      selectedValue = selected ? user.keys.find(key => key.name === selected) : user.keys[0];
+    }
+    return selectedValue;
+  }
+
+  // Determining whether to show a dropdown or not onClick
+  // based upon whether the currently displayed value has come
+  // from one of the nested user.keys[] or not.
+  // Additionally do not show the dropdown if there is only a
+  // single key, since there's nothing to change it to.
+  shouldShowVarDropdown(selected) {
+    const { user, variable } = this.props;
+
+    return !!this.getSelectedValue(selected)[variable] && Array.isArray(user.keys) && user.keys.length > 1;
+  }
+
   // Return value in this order
-  // - user value
+  // - selected user keys value (or first user keys)
+  // - top level user value
   // - default value
   // - uppercase key
-  getValue() {
+  getValue(selected) {
     const { variable } = this.props;
-    const value = this.props.user[variable] || this.getDefault();
+    const selectedValue = this.getSelectedValue(selected);
+
+    const value = selectedValue[variable] || this.props.user[variable] || this.getDefault();
 
     return typeof value === 'object' ? JSON.stringify(value) : value;
   }
 
   toggleVarDropdown() {
+    if (!this.shouldShowVarDropdown()) return;
     this.setState(prevState => ({ showDropdown: !prevState.showDropdown }));
   }
 
@@ -81,16 +105,15 @@ class Variable extends React.Component {
   }
 
   render() {
-    const { variable, user, selected } = this.props;
+    const { user, selected } = this.props;
 
     if (Array.isArray(user.keys)) {
-      const selectedValue = selected ? user.keys.find(key => key.name === selected) : user.keys[0];
       return (
         <span>
           {!this.state.showDropdown && (
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
             <span className="variable-underline" onClick={this.toggleVarDropdown}>
-              {selectedValue[variable]}
+              {this.getValue(selected)}
             </span>
           )}
           {this.state.showDropdown && this.renderVarDropdown()}
