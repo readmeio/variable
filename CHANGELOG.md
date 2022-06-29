@@ -1,3 +1,20 @@
+## 15.1.0 (2022-06-29)
+
+* chore(deps-dev): bump @babel/preset-env from 7.17.10 to 7.18.2 (#104) ([309aabf](https://github.com/readmeio/variable/commit/309aabf)), closes [#104](https://github.com/readmeio/variable/issues/104)
+* chore(deps-dev): bump @babel/preset-react from 7.16.7 to 7.17.12 (#107) ([e6ee906](https://github.com/readmeio/variable/commit/e6ee906)), closes [#107](https://github.com/readmeio/variable/issues/107)
+* chore(deps-dev): bump @commitlint/cli from 16.2.4 to 17.0.2 (#102) ([3fa9bdb](https://github.com/readmeio/variable/commit/3fa9bdb)), closes [#102](https://github.com/readmeio/variable/issues/102)
+* chore(deps-dev): bump @commitlint/config-conventional (#109) ([69d0ab1](https://github.com/readmeio/variable/commit/69d0ab1)), closes [#109](https://github.com/readmeio/variable/issues/109)
+* chore(deps-dev): bump @readme/eslint-config from 8.7.3 to 8.7.5 (#106) ([5497f21](https://github.com/readmeio/variable/commit/5497f21)), closes [#106](https://github.com/readmeio/variable/issues/106)
+* chore(deps-dev): bump babel-jest from 28.0.3 to 28.1.0 (#103) ([bca53bb](https://github.com/readmeio/variable/commit/bca53bb)), closes [#103](https://github.com/readmeio/variable/issues/103)
+* chore(deps-dev): bump eslint from 8.14.0 to 8.16.0 (#100) ([ad60b54](https://github.com/readmeio/variable/commit/ad60b54)), closes [#100](https://github.com/readmeio/variable/issues/100)
+* chore(deps-dev): bump husky from 7.0.4 to 8.0.1 (#105) ([f2f9ce6](https://github.com/readmeio/variable/commit/f2f9ce6)), closes [#105](https://github.com/readmeio/variable/issues/105)
+* chore(deps-dev): bump jest from 27.5.1 to 28.1.0 (#101) ([3ea5da5](https://github.com/readmeio/variable/commit/3ea5da5)), closes [#101](https://github.com/readmeio/variable/issues/101)
+* chore(deps-dev): bump webpack from 5.72.0 to 5.72.1 (#108) ([7d4640d](https://github.com/readmeio/variable/commit/7d4640d)), closes [#108](https://github.com/readmeio/variable/issues/108)
+* chore(deps-dev): bumping out of date dev deps (#111) ([2db78c2](https://github.com/readmeio/variable/commit/2db78c2)), closes [#111](https://github.com/readmeio/variable/issues/111)
+* feat: add some better value selection when providing multiple keys (#110) ([711da56](https://github.com/readmeio/variable/commit/711da56)), closes [#110](https://github.com/readmeio/variable/issues/110)
+
+
+
 ## 15.0.0 (2022-05-02)
 
 * feat: supporting node 18 (#98) ([4796208](https://github.com/readmeio/variable/commit/4796208)), closes [#98](https://github.com/readmeio/variable/issues/98)
