@@ -122,6 +122,49 @@ describe('multiple variables', () => {
     expect(container.querySelector('select')).not.toBeInTheDocument();
   });
 
+  it('should render from the top level if not set', () => {
+    const { container } = render(
+      <Variable
+        {...props}
+        user={{
+          topLevelProperty: 'this is coming straight from the top',
+          keys: [{ name: 'project1', apiKey: '123' }],
+        }}
+        variable={'topLevelProperty'}
+      />
+    );
+
+    expect(container).toHaveTextContent('this is coming straight from the top');
+
+    // Should not show the selected dropdown when clicked
+    fireEvent.click(container.querySelector('.variable-underline'));
+    expect(container.querySelector('select')).not.toBeInTheDocument();
+  });
+
+  it('should render the default if not set', () => {
+    const { container } = render(
+      <Variable
+        {...props}
+        defaults={[{ name: 'testDefault', default: 'this is a default value' }]}
+        variable={'testDefault'}
+      />
+    );
+
+    expect(container).toHaveTextContent('this is a default value');
+
+    // Should not show the selected dropdown when clicked
+    fireEvent.click(container.querySelector('.variable-underline'));
+    expect(container.querySelector('select')).not.toBeInTheDocument();
+  });
+
+  it('should not show a dropdown if there is only one option', () => {
+    const { container } = render(<Variable {...props} user={{ keys: [{ name: 'project1', apiKey: '123' }] }} />);
+
+    // Should not show the selected dropdown when clicked
+    fireEvent.click(container.querySelector('.variable-underline'));
+    expect(container.querySelector('select')).not.toBeInTheDocument();
+  });
+
   it.todo('should render auth dropdown if default and oauth enabled');
 });
 
