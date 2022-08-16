@@ -18,6 +18,12 @@ describe('single variable', () => {
     expect(container).toHaveTextContent('123456');
   });
 
+  it('should not fail if `defaults` has null entries', () => {
+    const { container } = render(<Variable {...props} defaults={[null]} />);
+
+    expect(container).toHaveTextContent('123456');
+  });
+
   it('should render default if value not set', () => {
     const { container } = render(<Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} user={{}} />);
 
