@@ -1,9 +1,10 @@
-const React = require('react');
 const classNames = require('classnames');
 const PropTypes = require('prop-types');
-const VariablesContext = require('./contexts/Variables');
+const React = require('react');
+
 const OauthContext = require('./contexts/Oauth');
 const SelectedAppContext = require('./contexts/SelectedApp');
+const VariablesContext = require('./contexts/Variables');
 
 class Variable extends React.Component {
   constructor(props) {

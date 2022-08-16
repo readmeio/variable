@@ -1,5 +1,5 @@
-const React = require('react');
 const { fireEvent, render } = require('@testing-library/react');
+const React = require('react');
 
 const { Variable, VARIABLE_REGEXP } = require('../index');
 
