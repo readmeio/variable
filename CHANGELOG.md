@@ -1,3 +1,18 @@
+## <small>15.1.1 (2022-08-16)</small>
+
+* fix: don't look at defaults for data if they're null (#121) ([3c6e0ca](https://github.com/readmeio/variable/commit/3c6e0ca)), closes [#121](https://github.com/readmeio/variable/issues/121)
+* chore(deps-dev): bump @babel/preset-env from 7.18.6 to 7.18.10 (#117) ([633e7e0](https://github.com/readmeio/variable/commit/633e7e0)), closes [#117](https://github.com/readmeio/variable/issues/117)
+* chore(deps-dev): bump @readme/eslint-config from 8.8.0 to 9.0.0 (#114) ([514de57](https://github.com/readmeio/variable/commit/514de57)), closes [#114](https://github.com/readmeio/variable/issues/114)
+* chore(deps-dev): bump babel-jest from 28.1.2 to 28.1.3 (#118) ([8fb76c6](https://github.com/readmeio/variable/commit/8fb76c6)), closes [#118](https://github.com/readmeio/variable/issues/118)
+* chore(deps-dev): bump eslint from 8.18.0 to 8.21.0 (#115) ([cd2c262](https://github.com/readmeio/variable/commit/cd2c262)), closes [#115](https://github.com/readmeio/variable/issues/115)
+* chore(deps-dev): bump jest from 28.1.2 to 28.1.3 (#116) ([e179682](https://github.com/readmeio/variable/commit/e179682)), closes [#116](https://github.com/readmeio/variable/issues/116)
+* chore(deps-dev): bump jest-environment-jsdom from 28.1.2 to 28.1.3 (#119) ([276011c](https://github.com/readmeio/variable/commit/276011c)), closes [#119](https://github.com/readmeio/variable/issues/119)
+* chore(deps-dev): bump webpack from 5.73.0 to 5.74.0 (#113) ([be06203](https://github.com/readmeio/variable/commit/be06203)), closes [#113](https://github.com/readmeio/variable/issues/113)
+* chore(deps-dev): bumping out of date dev deps (#120) ([fd21666](https://github.com/readmeio/variable/commit/fd21666)), closes [#120](https://github.com/readmeio/variable/issues/120)
+* chore(deps): bump terser from 5.8.0 to 5.14.2 (#112) ([bcbf879](https://github.com/readmeio/variable/commit/bcbf879)), closes [#112](https://github.com/readmeio/variable/issues/112)
+
+
+
 ## 15.1.0 (2022-06-29)
 
 * chore(deps-dev): bump @babel/preset-env from 7.17.10 to 7.18.2 (#104) ([309aabf](https://github.com/readmeio/variable/commit/309aabf)), closes [#104](https://github.com/readmeio/variable/issues/104)
