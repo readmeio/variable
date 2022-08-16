@@ -23,7 +23,7 @@ class Variable extends React.Component {
   }
 
   getDefault() {
-    const def = this.props.defaults.find(d => d.name === this.props.variable) || {};
+    const def = this.props.defaults.filter(Boolean).find(d => d.name === this.props.variable) || {};
     if (def.default) return def.default;
     return this.props.variable.toUpperCase();
   }
