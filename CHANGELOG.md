@@ -1,3 +1,9 @@
+## <small>15.1.2 (2022-08-17)</small>
+
+* fix: stop looking for data in `user.keys` if its an empty array (#122) ([bfb9298](https://github.com/readmeio/variable/commit/bfb9298)), closes [#122](https://github.com/readmeio/variable/issues/122)
+
+
+
 ## <small>15.1.1 (2022-08-16)</small>
 
 * fix: don't look at defaults for data if they're null (#121) ([3c6e0ca](https://github.com/readmeio/variable/commit/3c6e0ca)), closes [#121](https://github.com/readmeio/variable/issues/121)
