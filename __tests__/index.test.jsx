@@ -77,6 +77,18 @@ describe('multiple variables', () => {
     changeSelected: () => {},
   };
 
+  it('should not fail if user has `keys` but its empty', () => {
+    const p = {
+      ...props,
+      user: {
+        keys: [],
+      },
+    };
+
+    const { container } = render(<Variable {...p} />);
+    expect(container).toHaveTextContent('APIKEY');
+  });
+
   it('should render the first of multiple values', () => {
     const { container } = render(<Variable {...props} />);
 
