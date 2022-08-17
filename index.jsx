@@ -31,7 +31,7 @@ class Variable extends React.Component {
   getSelectedValue(selected) {
     const { user } = this.props;
     let selectedValue = {};
-    if (Array.isArray(user.keys)) {
+    if (Array.isArray(user.keys) && user.keys.length) {
       selectedValue = selected ? user.keys.find(key => key.name === selected) : user.keys[0];
     }
     return selectedValue;
@@ -108,7 +108,7 @@ class Variable extends React.Component {
   render() {
     const { user, selected } = this.props;
 
-    if (Array.isArray(user.keys)) {
+    if (Array.isArray(user.keys) && user.keys.length) {
       return (
         <span>
           {!this.state.showDropdown && (
