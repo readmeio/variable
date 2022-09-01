@@ -38,7 +38,7 @@
     "@readme/eslint-config": "^10.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
-    "babel-jest": "^28.0.3",
+    "babel-jest": "^29.0.1",
     "babel-loader": "^8.2.4",
     "babel-polyfill": "^6.26.0",
     "eslint": "^8.22.0",
