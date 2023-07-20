@@ -224,4 +224,10 @@ describe('VARIABLE_REGEXP', () => {
   it('should match against colons with non-english characters', () => {
     expect('<<glossary:ラベル>>').toMatch(new RegExp(VARIABLE_REGEXP));
   });
+
+  it('should NOT match against newlines', () => {
+    expect('<<what the\nfuck>>').not.toMatch(new RegExp(VARIABLE_REGEXP));
+    expect('<<what the\rfuck>>').not.toMatch(new RegExp(VARIABLE_REGEXP));
+    expect('<<what the\r\nfuck>>').not.toMatch(new RegExp(VARIABLE_REGEXP));
+  });
 });
