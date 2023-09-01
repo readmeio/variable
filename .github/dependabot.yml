@@ -41,6 +41,6 @@ updates:
       - dependency-name: react-dom
         versions:
           - ">= 16"
-      - dependency-name: @testing-library/react
+      - dependency-name: "@testing-library/react"
         versions:
           - ">= 13"
