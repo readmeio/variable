@@ -1,5 +1,9 @@
 {
-  "extends": "@readme/eslint-config/testing",
+  "extends": [
+    "@readme/eslint-config/testing/jest",
+    "@readme/eslint-config/testing/jest-dom",
+    "@readme/eslint-config/testing/react"
+  ],
   "rules": {
     "testing-library/no-container": "off",
     "testing-library/no-node-access": "off"
