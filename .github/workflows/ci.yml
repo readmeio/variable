@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [14, 16, 18]
+        node: [16, 18]
         react: [16, 17, 18]
 
     name: build (${{ matrix.node }} w/ React ${{ matrix.react }}
@@ -19,11 +19,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-
-      # Node 14 ships with npm@6 which doesn't install peerDeps by default.
-      - name: Install npm@7
-        if: matrix.node == '14'
-        run: npm install -g npm@7
 
       - name: Install deps
         run: npm ci
