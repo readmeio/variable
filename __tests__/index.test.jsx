@@ -36,6 +36,13 @@ describe('single variable', () => {
     expect(container).toHaveTextContent('APIKEY');
   });
 
+  it('should allow the use of "name" as a prop', () => {
+    const { variable, ...rest } = props;
+    const { container } = render(<Variable {...rest} name="apiKey" />);
+
+    expect(container).toHaveTextContent('123456');
+  });
+
   it('should render auth dropdown if default and oauth enabled', () => {
     const { container } = render(
       <Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} oauth user={{}} />,
