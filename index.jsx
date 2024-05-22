@@ -31,7 +31,7 @@ class Variable extends React.Component {
     const def = this.props.defaults.filter(Boolean).find(d => d.name === this.getName()) || {};
 
     if (def.default) return def.default;
-    return this.getName().toUpperCase();
+    return this.getName()?.toUpperCase() || undefined;
   }
 
   getSelectedValue(selected) {
