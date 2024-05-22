@@ -24,14 +24,17 @@ class Variable extends React.Component {
   }
 
   getName() {
-    return this.props.name || this.props.variable;
+    const name = this.props.name || this.props.variable;
+    if (!name) throw new TypeError("Missing prop 'name' or 'variable' for Variable component!");
+
+    return name;
   }
 
   getDefault() {
     const def = this.props.defaults.filter(Boolean).find(d => d.name === this.getName()) || {};
 
     if (def.default) return def.default;
-    return this.getName()?.toUpperCase() || undefined;
+    return this.getName().toUpperCase();
   }
 
   getSelectedValue(selected) {
