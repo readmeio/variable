@@ -11,6 +11,7 @@ class Variable extends React.Component {
     super(props);
     this.state = { showDropdown: false };
 
+    this.getName = this.getName.bind(this);
     this.toggleVarDropdown = this.toggleVarDropdown.bind(this);
     this.toggleAuthDropdown = this.toggleAuthDropdown.bind(this);
     this.renderVarDropdown = this.renderVarDropdown.bind(this);
@@ -22,10 +23,15 @@ class Variable extends React.Component {
     this.props.changeSelected(event.target.value);
   }
 
+  getName() {
+    return this.props.name || this.props.variable;
+  }
+
   getDefault() {
-    const def = this.props.defaults.filter(Boolean).find(d => d.name === this.props.variable) || {};
+    const def = this.props.defaults.filter(Boolean).find(d => d.name === this.getName()) || {};
+
     if (def.default) return def.default;
-    return this.props.variable.toUpperCase();
+    return this.getName().toUpperCase();
   }
 
   getSelectedValue(selected) {
@@ -43,9 +49,9 @@ class Variable extends React.Component {
   // Additionally do not show the dropdown if there is only a
   // single key, since there's nothing to change it to.
   shouldShowVarDropdown(selected) {
-    const { user, variable } = this.props;
+    const { user } = this.props;
 
-    return !!this.getSelectedValue(selected)[variable] && Array.isArray(user.keys) && user.keys.length > 1;
+    return !!this.getSelectedValue(selected)[this.getName()] && Array.isArray(user.keys) && user.keys.length > 1;
   }
 
   // Return value in this order
@@ -54,10 +60,9 @@ class Variable extends React.Component {
   // - default value
   // - uppercase key
   getValue(selected) {
-    const { variable } = this.props;
     const selectedValue = this.getSelectedValue(selected);
 
-    const value = selectedValue[variable] || this.props.user[variable] || this.getDefault();
+    const value = selectedValue[this.getName()] || this.props.user[this.getName()] || this.getDefault();
 
     return typeof value === 'object' ? JSON.stringify(value) : value;
   }
@@ -142,12 +147,13 @@ class Variable extends React.Component {
 Variable.propTypes = {
   changeSelected: PropTypes.func.isRequired,
   defaults: PropTypes.arrayOf(PropTypes.shape({ default: PropTypes.string, name: PropTypes.string })).isRequired,
+  name: PropTypes.string,
   oauth: PropTypes.bool,
   selected: PropTypes.string.isRequired,
   user: PropTypes.shape({
     keys: PropTypes.array,
   }).isRequired,
-  variable: PropTypes.string.isRequired,
+  variable: PropTypes.string,
 };
 
 Variable.defaultProps = {

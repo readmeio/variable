@@ -36,9 +36,16 @@ describe('single variable', () => {
     expect(container).toHaveTextContent('APIKEY');
   });
 
+  it('should allow the use of "name" as a prop', () => {
+    const { variable, ...rest } = props;
+    const { container } = render(<Variable {...rest} name="apiKey" />);
+
+    expect(container).toHaveTextContent('123456');
+  });
+
   it('should render auth dropdown if default and oauth enabled', () => {
     const { container } = render(
-      <Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} oauth user={{}} />,
+      <Variable {...props} defaults={[{ name: 'apiKey', default: 'default' }]} oauth user={{}} />
     );
 
     fireEvent.click(container.querySelector('.variable-underline'));
@@ -125,7 +132,7 @@ describe('multiple variables', () => {
         user={{
           keys: [{ name: 'project1', apiKey: '123' }, { name: 'project2', apiKey: '456' }, { name: 'project3' }],
         }}
-      />,
+      />
     );
 
     fireEvent.click(container.querySelector('.variable-underline'));
@@ -149,7 +156,7 @@ describe('multiple variables', () => {
           keys: [{ name: 'project1', apiKey: '123' }],
         }}
         variable={'topLevelProperty'}
-      />,
+      />
     );
 
     expect(container).toHaveTextContent('this is coming straight from the top');
@@ -165,7 +172,7 @@ describe('multiple variables', () => {
         {...props}
         defaults={[{ name: 'testDefault', default: 'this is a default value' }]}
         variable={'testDefault'}
-      />,
+      />
     );
 
     expect(container).toHaveTextContent('this is a default value');
