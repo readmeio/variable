@@ -1,7 +1,7 @@
 const { fireEvent, render } = require('@testing-library/react');
 const React = require('react');
 
-const { Variable, VARIABLE_REGEXP } = require('../index');
+const { Variable, VARIABLE_REGEXP, MDX_VARIABLE_REGEXP } = require('../index');
 
 describe('single variable', () => {
   const props = {
@@ -236,5 +236,47 @@ describe('VARIABLE_REGEXP', () => {
     expect('<<what the\nfuck>>').not.toMatch(new RegExp(VARIABLE_REGEXP));
     expect('<<what the\rfuck>>').not.toMatch(new RegExp(VARIABLE_REGEXP));
     expect('<<what the\r\nfuck>>').not.toMatch(new RegExp(VARIABLE_REGEXP));
+  });
+});
+
+describe('MDX_VARIABLE_REGEXP', () => {
+  it('should **not** match against periods', () => {
+    expect('{user.api.key}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should **not** match against hyphens', () => {
+    expect('{user.api-key}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should **not** match against spaces', () => {
+    expect('{user.api key}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should **not match against colons', () => {
+    expect('{user.glossary:term}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should match against underscores', () => {
+    expect('{user.api_key}').toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should be case insensitive', () => {
+    expect('{user.apiKeY}').toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should match non-leading numeric characters', () => {
+    expect('{user.P2P}').toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+    expect('{user.123}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+    expect('{user.A123}').toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should match non-english characters', () => {
+    expect('{user.片仮名}').toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
+
+  it('should NOT match against newlines', () => {
+    expect('{user.what_the\nfuck}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+    expect('{user.what_the\rfuck}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+    expect('{user.what_the\r\nfuck}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
   });
 });
