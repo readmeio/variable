@@ -196,7 +196,7 @@ module.exports.Variable = Variable;
 // - <<glossary:glossary items>> - glossary
 module.exports.VARIABLE_REGEXP = /(?:\\)?<<((?:(?![\r\n])[-_\p{L}:.\s\d])+)(?:\\)?>>/iu.source;
 
-/** 
+/**
  * @example `{user.api_key}`
  * @example `{user.apiKeY}`
  * @example `{user.片仮名}`
