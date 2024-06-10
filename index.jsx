@@ -195,5 +195,16 @@ module.exports.Variable = Variable;
 // - <<apiKey>> - regular variables
 // - <<glossary:glossary items>> - glossary
 module.exports.VARIABLE_REGEXP = /(?:\\)?<<((?:(?![\r\n])[-_\p{L}:.\s\d])+)(?:\\)?>>/iu.source;
+
+/**
+ * @example `{user.api_key}`
+ * @example `{user.apiKeY}`
+ * @example `{user.片仮名}`
+ * @example `{user.P2P}`
+ * @see {@link https://stackoverflow.com/a/6926184}
+ */
+module.exports.MDX_VARIABLE_REGEXP =
+  /(\\)?\{user.[$_\p{L}][$_\p{L}\p{Mn}\p{Mc}\p{Nd}\p{Pc}\u200C\u200D]*(\\)?\}/iu.source;
+
 module.exports.VariablesContext = VariablesContext;
 module.exports.SelectedAppContext = SelectedAppContext;
