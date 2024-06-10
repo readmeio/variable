@@ -204,7 +204,7 @@ module.exports.VARIABLE_REGEXP = /(?:\\)?<<((?:(?![\r\n])[-_\p{L}:.\s\d])+)(?:\\
  * @see {@link https://stackoverflow.com/a/6926184}
  */
 module.exports.MDX_VARIABLE_REGEXP =
-  /(\\)?\{user.[$_\p{L}][$_\p{L}\p{Mn}\p{Mc}\p{Nd}\p{Pc}\u200C\u200D]*(\\)?\}/iu.source;
+  /(\\)?\{user.([$_\p{L}][$_\p{L}\p{Mn}\p{Mc}\p{Nd}\p{Pc}\u200C\u200D]*)(\\)?\}/iu.source;
 
 module.exports.VariablesContext = VariablesContext;
 module.exports.SelectedAppContext = SelectedAppContext;
