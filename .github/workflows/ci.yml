@@ -7,8 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [16, 18, 20]
-        react: [16, 17, 18]
+        node:
+          - lts/-1
+          - lts/*
+          - latest
+        react: [18, 19]
 
     name: build (${{ matrix.node }} w/ React ${{ matrix.react }}
 
