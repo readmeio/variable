@@ -279,4 +279,11 @@ describe('MDX_VARIABLE_REGEXP', () => {
     expect('{user.what_the\rfuck}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
     expect('{user.what_the\r\nfuck}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
   });
+
+  it('should NOT match JS template literals without a dot after user', () => {
+    // Bug case: {userXYZ} should not match as if it were {user.XYZ}
+    expect('{userEndpoint}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+    expect('{userXYZ}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+    expect('{baseUrl}').not.toMatch(new RegExp(MDX_VARIABLE_REGEXP));
+  });
 });
